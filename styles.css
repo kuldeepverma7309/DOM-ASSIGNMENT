@@ -1,0 +1,178 @@
+/* Resetting default margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #2c3e50, #4ca1af); /* Dark gradient background */
+    color: white; /* Text color */
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #34495e; /* Dark blue-gray background */
+    color: white; /* Text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for header */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em; /* Header title font size */
+}
+
+header p {
+    margin: 10px 0 0; /* Top margin for paragraph */
+    font-size: 1.2em; /* Paragraph font size */
+}
+
+/* Section styles */
+section {
+    margin: 30px 20px 30px 20px; /* Margin around section */
+    padding: 20px; /* Padding inside section */
+    background-color: #2c3e50; /* Dark blue-gray background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for section */
+    color: white; /* Text color */
+}
+
+/* Form styles */
+form {
+    display: grid; /* Grid layout for form */
+    grid-template-columns: 1fr 2fr; /* Two columns */
+    gap: 10px; /* Gap between grid items */
+}
+
+form label {
+    align-self: center; /* Center-align labels vertically */
+    color: #ecf0f1; /* Light gray text color */
+}
+
+form input, textarea {
+    padding: 10px; /* Padding for inputs and textarea */
+    font-size: 16px; /* Font size */
+    border: 1px solid #34495e; /* Dark blue-gray border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #3b4b58; /* Slightly lighter dark gray background */
+    color: white; /* Text color */
+}
+
+textarea::placeholder,
+form input::placeholder {
+    color: #bdc3c7; /* Light gray placeholder text color */
+}
+
+form button {
+    padding: 10px; /* Padding for button */
+    font-size: 16px; /* Font size */
+    color: white; /* Text color */
+    background-color: #1abc9c; /* Green background */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    grid-column: 1 / span 2; /* Button spans two columns */
+}
+
+form button:hover {
+    background-color: #16a085; /* Darker green background on hover */
+}
+
+/* Table wrapper styles */
+.table-wrapper {
+    overflow-y: auto; /* Vertical scrollbar when content overflows */
+    margin-top: 20px; /* Top margin */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+/* Table styles */
+table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Collapse border */
+    background-color: #2c3e50; /* Dark blue-gray background */
+}
+
+table,
+th,
+td {
+    border: 1px solid #ccc; /* Light gray border */
+}
+
+th,
+td {
+    padding: 10px; /* Padding for cells */
+    text-align: left; /* Left-align text */
+}
+
+th {
+    background-color: #34495e; /* Dark blue-gray background for header */
+    color: white; /* Text color */
+}
+
+/* Heading styles */
+h2 {
+    text-align: center; /* Center-align heading */
+}
+
+/* Button styles */
+button {
+    cursor: pointer; /* Pointer cursor */
+    border: none; /* No border */
+    padding: 5px 10px; /* Padding for button */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+button.edit {
+    background-color: #3498db; /* Blue background for edit button */
+    color: white; /* Text color */
+}
+
+button.edit:hover {
+    background-color: #2980b9; /* Darker blue background on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Light box shadow on hover */
+}
+
+button.delete {
+    background-color: #e74c3c; /* Red background for delete button */
+    color: white; /* Text color */
+}
+
+button.delete:hover {
+    background-color: #c0392b; /* Darker red background on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Light box shadow on hover */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    form {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    form label,
+    form input,
+    form textarea {
+        width: 100%; /* Full width for labels, inputs, and textarea */
+    }
+
+    form button {
+        width: 100%; /* Full width for button */
+        margin-top: 10px; /* Top margin */
+    }
+
+    .table-wrapper {
+        overflow-x: auto; /* Horizontal scrollbar when content overflows */
+    }
+
+    th,
+    td {
+        white-space: nowrap; /* Prevent text wrapping */
+        padding: 8px 16px; /* Padding for cells */
+    }
+}

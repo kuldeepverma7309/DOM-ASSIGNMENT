@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Student Registration System</h1>
+        <p>The Student Registration System allows users to register, view, edit, and delete student details.</p>
+    </header>
+
+    <!-- Main Section for Student Registration Form -->
+    <section>
+        <!-- Student Registration Form -->
+        <form id="studentRegistrationForm">
+            <!-- Input fields for student details -->
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" name="studentName" placeholder="Enter Student Name" required>
+
+            <label for="studentID">Student ID:</label>
+            <input type="number" id="studentID" name="studentID" placeholder="Enter Student ID" required>
+
+            <label for="class">Class:</label>
+            <input type="text" id="class" name="class" placeholder="Enter Student's Class" required>
+
+            <label for="emailID">Email ID:</label>
+            <input type="email" id="emailID" name="emailID" placeholder="Enter Email ID" required>
+
+            <label for="contactNo">Contact No:</label>
+            <input type="number" id="contactNo" name="contactNo" placeholder="Enter Contact No" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" placeholder="Enter Address" required></textarea>
+
+            <!-- Submit button -->
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <!-- Section for Displaying Registered Students -->
+    <section class="table-wrapper">
+        <!-- Heading for Registered Students -->
+        <h2>Registered Students</h2>
+        
+        <!-- Table to display student records -->
+        <table id="studentTable">
+            <thead>
+                <!-- Table header row -->
+                <tr>
+                    <th>Student Name</th>
+                    <th>Student ID</th>
+                    <th>Class</th>
+                    <th>Email ID</th>
+                    <th>Contact No</th>
+                    <th>Address</th>
+                    <th>Edit/Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Records will be added dynamically using JavaScript -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- JavaScript file for functionality -->
+    <script src="./script.js"></script>
+</body>
+</html>
